@@ -1,4 +1,6 @@
-About mulating a datacenter using a toy topology in a network emulator called Mininet. 
+Emulating a datacenter using a toy topology in a network emulator called Mininet. 
+
+
 So our datacenter topology will consist of two levels of switches. The top level are called core switches and the bottom are called edge switches.  Each core switch is connected to every edge switch and for the first three assignments, our topology will have two core switches and three edge switches organized just like you see here. Connected to each edge switch are hosts.  We'll also have two hosts attached to each edge switch. In our data center, we'll be emulating a software-defined network, which has a controller which connects to all switches. And on this controller, we'll be running an open source software controller called Ryu and we'll be extending a program that can control the network in a centralized manner. Switches and hosts are connected by links and on each switch is a port for each link. 
 
 And these ports are important in a SDN, since it's one way we can specify forwarding behavior.  Our host, h3 has IP address 10.0.0.3 and our controller program installs a rule at switch s101 that matches on h3's IP address. The first part is a match and the second part is the action. So if a packet arrives at switch s101 from host h3, we'll look for a matching rule in that switch. So the switch would find its matching rule and output it or forward output one. 
